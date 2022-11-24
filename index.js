@@ -1,9 +1,10 @@
-import WebSocket from 'ws';
+const ws2 = require("ws");
+const WebSocket = new ws2.WebSocket
 const { spawn } = require('node:child_process')
 const config = require("./config.json")
 
 
-const ws = new WebSocket('ws://0.0.0.0:/neverGonnaGiveYouUp');
+const ws = new WebSocket("ws://0.0.0.0:8080/nevergonnagiveyouup");
 
 ws.on('open', function open() {
     ws.send('never gonna let you down');
