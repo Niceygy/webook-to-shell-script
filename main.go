@@ -14,6 +14,8 @@ func getScript() string {
 	if argsInt == nil {
 		fmt.Println("No arguments passed! Please inclue location of script")
 		os.Exit(1)
+	} else {
+		fmt.Println("Arguments passed!")
 	}
 	argsOut := strings.Join(argsInt, " ")
 	return argsOut
@@ -37,5 +39,7 @@ func webooktoshellscript() {
 }
 
 func main() {
+	fmt.Println("Starting server...")
 	webooktoshellscript()
+	fmt.Println("Server started!")
 }
